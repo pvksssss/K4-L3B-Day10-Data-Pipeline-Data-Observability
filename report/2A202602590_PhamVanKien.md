@@ -6,8 +6,8 @@
 | ----------------- | ------------------------------------------------------------------------------------ |
 | Họ và tên         | Phạm Văn Kiên                                                                        |
 | MSSV              | 2A202602590                                                                          |
-| Khóa/Lớp          | K4 - Lớp 3B                                                                          |
-| Tên nhóm          | pkien1                                                                               |
+| Khóa/Lớp          | K4-L3B                                                                               |
+| Tên nhóm          | unknown                                                                              |
 | Vai trò chính     | Trưởng nhóm / Pipeline Integrator & Ingestion Engineer                               |
 | Repository        | https://github.com/pvksssss/K4-L3B-Day10-Data-Pipeline-Data-Observability            |
 | Ngày hoàn thành   | 2026-09-26                                                                           |
