@@ -5,7 +5,7 @@
 | Thông tin         | Nội dung                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------ |
 | Khóa/Lớp          | K4 - Lớp 3B                                                                          |
-| Tên nhóm          |                                                                              |
+| Tên nhóm          |unknown                                                                   |
 | Repository        | https://github.com/pvksssss/K4-L3B-Day10-Data-Pipeline-Data-Observability            |
 | Ngày hoàn thành   | 2026-09-26                                                                           |
 
