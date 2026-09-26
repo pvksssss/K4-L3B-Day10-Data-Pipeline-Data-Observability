@@ -9,7 +9,7 @@
 | Khóa/Lớp          | K4-L3B                                                                               |
 | Tên nhóm          | unknown                                                                              |
 | Vai trò chính     | Trưởng nhóm / Pipeline Integrator & Ingestion Engineer                               |
-| Repository        | https://github.com/pvksssss/K4-L3B-Day10-Data-Pipeline-Data-Observability            |
+| Repository        | https://github.com/pvksssss/K4-L3B-Day10-unknown-Data-Pipeline-Data-Observability    |
 | Ngày hoàn thành   | 2026-09-26                                                                           |
 
 ---
