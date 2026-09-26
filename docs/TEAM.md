@@ -27,7 +27,7 @@
 - **Điều học được / Đóng góp chính:**
   - Hiểu sâu sắc về thiết kế Idempotent Pipeline, quản lý trạng thái luồng dữ liệu đa tầng và phục hồi tự động khi có sự cố dữ liệu.
 
-### ## ThanhVien2-MSSV2
+### ## Hồ Hoàng Phương Anh- 2A202602460
 - **Vai trò:** Phụ trách RAG, Vector Database, Data Observability & Benchmark Evaluation.
 - **Công việc chi tiết đã hoàn thành:**
   - Quản lý mô hình embedding `sentence-transformers/all-MiniLM-L6-v2` và nạp 3 collection riêng biệt trong ChromaDB (`papers-baseline`, `papers-corrupted`, `papers-repaired`).
