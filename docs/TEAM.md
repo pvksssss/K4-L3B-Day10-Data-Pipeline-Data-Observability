@@ -2,7 +2,7 @@
 
 - **Tên Nhóm:** `unknown`
 - **Mã Nhóm / Lớp:** `K4-L3B`
-- **Tên Repository Nộp Bài:** `https://github.com/pvksssss/K4-L3B-Day10-Data-Pipeline-Data-Observability`
+- **Tên Repository Nộp Bài:** `https://github.com/pvksssss/K4-L3B-Day10-unknown-Data-Pipeline-Data-Observability`
 
 ---
 
@@ -10,8 +10,8 @@
 
 | STT | Họ và tên | MSSV | Email | Vai trò & Phân công công việc | Báo cáo cá nhân |
 |---:|---|---|---|---|---|
-| 1 | Phạm Văn Kiên | 2A202602590 | | Trưởng nhóm / Pipeline Integrator & Ingestion (`core/`, `ingestion/`, `phase1.py`, `corruption_flow.py`) | `report/2A202602590_PhamVanKien.md` |
-| 2 | Hồ Hoàng Phương Anh | 2A202602460 | | RAG, Vector Index & Observability (`retrieval/`, `quality.py` GX 1.x, `testset.py`, reporting) | `report/2A202602460_HoangPhuongAnh.md` |
+| 1 | Phạm Văn Kiên | 2A202602590 | | Trưởng nhóm / Pipeline Integrator & Ingestion (`core/`, `ingestion/`, `phase1.py`, `corruption_flow.py`) | `report/individual_2A202602590_PhamVanKien.md` |
+| 2 | Hồ Hoàng Phương Anh | 2A202602460 | | RAG, Vector Index & Observability (`retrieval/`, `quality.py` GX 1.x, `testset.py`, reporting) | `report/individual_2A202602460_HoangPhuongAnh.md` |
 
 ---
 
