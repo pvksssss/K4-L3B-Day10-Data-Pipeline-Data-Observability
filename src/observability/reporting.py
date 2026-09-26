@@ -1,6 +1,17 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any
+
+from core.utils import write_text
+
+
+def _status(success: bool) -> str:
+    return "PASS" if success else "FAIL"
+
+
+def _metric(value: Any) -> str:
+    return f"{float(value):.3f}"
 
 
 def generate_phase1_report(
@@ -10,15 +21,47 @@ def generate_phase1_report(
     quality: dict[str, Any],
     freshness: dict[str, Any],
 ) -> None:
-    """TODO(student): viet markdown report cho baseline phase.
+    """Write the baseline source, evaluation, quality, and freshness evidence."""
+    lines = [
+        "# Phase-one baseline report",
+        "",
+        "## Source and artifacts",
+        "",
+        f"- Source: {source_summary['source_api']}",
+        f"- Raw records: {source_summary['raw_records']}",
+        f"- Clean records: {source_summary['clean_records']}",
+    ]
+    for key in (
+        "raw_records_path", "clean_csv_path", "clean_json_path", "embeddings_path",
+        "test_set_path", "metrics_path", "answers_path", "quality_path", "freshness_path",
+    ):
+        if key in source_summary:
+            lines.append(f"- {key}: `{source_summary[key]}`")
 
-    Pseudo-code:
-    1. Gom source summary.
-    2. In metrics retrieval/evaluation.
-    3. In data quality va freshness.
-    4. Ghi markdown vao report_path.
-    """
-    raise NotImplementedError("Student task: implement phase 1 report.")
+    lines.extend(["", "## Baseline evaluation", "", f"- Samples: {metrics['samples']}"])
+    for key in ("retrieval_hit_rate", "mean_token_f1", "judge_accuracy", "mean_judge_score"):
+        lines.append(f"- {key}: {_metric(metrics[key])}")
+
+    lines.extend([
+        "", "## Data quality", "",
+        f"- Overall: {_status(quality['success'])}",
+        f"- Great Expectations: {_status(quality['gx_success'])}",
+    ])
+    for expectation in quality["expectations"]:
+        column = f" ({expectation['column']})" if expectation.get("column") else ""
+        lines.append(f"- {expectation['expectation_type']}{column}: {_status(expectation['success'])}")
+
+    lines.extend([
+        "", "## Freshness", "",
+        f"- Status: {_status(freshness['is_fresh'])}",
+        f"- Stale rows: {freshness['stale_rows']} / {freshness['total_rows']}",
+        f"- Stale ratio: {_metric(freshness['stale_ratio'])}",
+        f"- Threshold days: {freshness['threshold_days']}",
+    ])
+    for key in ("oldest_published", "latest_published"):
+        if freshness.get(key) is not None:
+            lines.append(f"- {key}: {freshness[key]}")
+    write_text(Path(report_path), "\n".join(lines) + "\n")
 
 
 def generate_corruption_report(
