@@ -14,7 +14,7 @@
 | STT | Họ và tên | MSSV | Vai trò chính | Module/deliverable sở hữu |
 | --: | --- | --- | --- | --- |
 | 1 | Phạm Văn Kiên | 2A202602590 |  Pipeline Integrator& Data Foundation & Ingestion Engineer | `core/config.py`, `script/run_phase1.py`, `script/run_corruption_flow.py`,  |
-| 2 |  | 2A2026 | RAG & Vector Storage Engineer & Observability & Evaluation Specialist | `src/retrieval/index.py`, `src/retrieval/embeddings.py`, ChromaDB,  `src/observability/quality.py` (GX 1.x), `src/evaluation/testset.py`, reports |
+| 2 | Hồ Hoàng Phương Anh | 2A202602460 | RAG & Vector Storage Engineer & Observability & Evaluation Specialist | `src/retrieval/index.py`, `src/retrieval/embeddings.py`, ChromaDB,  `src/observability/quality.py` (GX 1.x), `src/evaluation/testset.py`, reports |
 
 ---
 
@@ -65,9 +65,9 @@ data/reports/corruption_report.md (3-State Comparison Table)
 | --- | --- | --- | --- | --- |
 | **Ingestion** | Crossref REST API / Snapshot | Bóc tách metadata, retry 429/503, fallback offline | `data/raw/crossref_records.json` | Phạm Văn Kiên |
 | **Cleaning** | Raw `PaperRecord` objects | Strip XML/HTML tags, tính `age_days`, tạo `text_for_embedding` 5 phần | `data/clean/papers_clean.csv`, `papers_clean.json` | Phạm Văn Kiên |
-| **Embedding / Index** | Clean / Corrupted / Repaired DF | Sinh vector MiniLM-L6-v2, tạo ChromaDB collections (`cosine`) | `data/chroma/`, `data/embeddings/*.json` | Thành viên 2 |
-| **Evaluation** | Clean DataFrame | Sinh bộ 10 câu hỏi đa dạng qua 4 dạng (`summary`, `authors`, `date`, `categories`) | `data/eval/test_set.json` | Thành viên 2 |
-| **Observability** | DataFrame (3 trạng thái) | Kiểm thử GX 1.x (4 expectations), đo Freshness SLA (180 ngày) | `data/quality/*.json` | Thành viên 2 |
+| **Embedding / Index** | Clean / Corrupted / Repaired DF | Sinh vector MiniLM-L6-v2, tạo ChromaDB collections (`cosine`) | `data/chroma/`, `data/embeddings/*.json` | Hồ Hoàng Phương Anh |
+| **Evaluation** | Clean DataFrame | Sinh bộ 10 câu hỏi đa dạng qua 4 dạng (`summary`, `authors`, `date`, `categories`) | `data/eval/test_set.json` | Hồ Hoàng Phương Anh |
+| **Observability** | DataFrame (3 trạng thái) | Kiểm thử GX 1.x (4 expectations), đo Freshness SLA (180 ngày) | `data/quality/*.json` | Hồ Hoàng Phương Anh |
 | **Corruption / Repair** | Clean DataFrame / Raw records | Tiêm 6 kịch bản lỗi, log biến đổi; Idempotent repair từ raw records | `data/results/corruption_log.json`, `papers_clean_repaired.json` | Phạm Văn Kiên |
 | **Orchestration** | Toàn bộ pipeline | Kết nối end-to-end các pha, xuất báo cáo Markdown đối chiếu 3 trạng thái | `phase1_report.md`, `corruption_report.md` | Phạm Văn Kiên |
 
