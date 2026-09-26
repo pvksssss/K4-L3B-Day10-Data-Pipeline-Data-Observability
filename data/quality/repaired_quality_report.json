@@ -1,0 +1,45 @@
+{
+  "report_name": "repaired",
+  "success": true,
+  "gx_success": true,
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "success": true,
+      "observed_value": 24
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "success": true,
+      "column": "paper_id",
+      "unexpected_count": 0
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "success": true,
+      "column": "paper_id",
+      "unexpected_count": 0
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "success": true,
+      "column": "title",
+      "unexpected_count": 0
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "success": true,
+      "column": "summary",
+      "unexpected_count": 0
+    }
+  ],
+  "freshness": {
+    "latest_published": "2026-07-22",
+    "oldest_published": "2026-03-28",
+    "threshold_days": 180,
+    "stale_rows": 1,
+    "total_rows": 24,
+    "stale_ratio": 0.041666666666666664,
+    "is_fresh": true
+  }
+}
